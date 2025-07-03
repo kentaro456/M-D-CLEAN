@@ -1,12 +1,14 @@
 import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
-import video1 from '../assets/image/video1.mp4';
-import video2 from '../assets/image/video2.mp4';
-import video3 from '../assets/image/video3.mp4';
+import video1 from '../assets/videos/video1.mp4';
+import video2 from '../assets/videos/video2.mp4';
+import video3 from '../assets/videos/video3.mp4';
+import video4 from '../assets/videos/video4.mp4';
+import video5 from '../assets/videos/video5.mp4';
 import { ArrowRight } from 'lucide-react';
 
-const videos = [video1, video2, video3];
+const videos = [video1, video2, video3, video4, video5];
 
 const Hero = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -20,9 +22,15 @@ const Hero = () => {
   const ctaRef = useRef(null);
 
   useEffect(() => {
+    // Set initial state for videos to avoid inline style conflicts
+    gsap.set(videoRefs[0].current, { opacity: 1, scale: 1 });
+    gsap.set(videoRefs[1].current, { opacity: 0, scale: 1 });
+  }, []);
+
+  useEffect(() => {
     const timer = setInterval(() => {
       setCurrentVideoIndex(prevIndex => (prevIndex + 1) % videos.length);
-    }, 7000);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
@@ -41,8 +49,22 @@ const Hero = () => {
     videoRefs[nextPlayer].current.load();
     videoRefs[nextPlayer].current.play().catch(error => console.error("Autoplay failed:", error));
 
-    gsap.to(videoRefs[nextPlayer].current, { opacity: 1, duration: 2, ease: 'power2.inOut' });
-    gsap.to(videoRefs[currentPlayer].current, { opacity: 0, duration: 2, ease: 'power2.inOut' });
+    const tl = gsap.timeline();
+    
+    // Animate out current video
+    tl.to(videoRefs[currentPlayer].current, { 
+      scale: 1.1, 
+      opacity: 0, 
+      duration: 1.5, 
+      ease: 'power3.inOut'
+    });
+    
+    // Animate in next video, overlapping for a smoother effect
+    tl.fromTo(videoRefs[nextPlayer].current, 
+      { scale: 1.1, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 1.5, ease: 'power3.inOut' },
+      "-=1.3" // Overlap start time
+    );
 
     setActivePlayer(nextPlayer);
   }, [currentVideoIndex]);
@@ -87,7 +109,6 @@ const Hero = () => {
           playsInline
           loop
           className="w-full h-full object-cover absolute"
-          style={{ opacity: 1 }}
         />
         <video
           ref={videoRefs[1]}
@@ -96,7 +117,6 @@ const Hero = () => {
           playsInline
           loop
           className="w-full h-full object-cover absolute"
-          style={{ opacity: 0 }}
         />
         <div className="absolute inset-0 bg-brand-dark/60"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
