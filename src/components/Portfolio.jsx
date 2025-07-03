@@ -9,6 +9,7 @@ const PortfolioElegant = () => {
   const [selectedVehicle, setSelectedVehicle] = useState(null);
   const slideRefs = useRef([]);
   const containerRef = useRef(null);
+  const [xOffsetFactor, setXOffsetFactor] = useState(45);
   
   // --- Animation Constants ---
   const DURATION = 0.8;
@@ -16,8 +17,22 @@ const PortfolioElegant = () => {
   const PRIMARY_SCALE = 1;
   const SECONDARY_SCALE = 0.7;
   const ROTATION = 40; 
-  const X_OFFSET_FACTOR = 45;
   const Y_OFFSET = 20;
+
+  useEffect(() => {
+    const handleResize = () => {
+      // lg breakpoint in Tailwind is 1024px
+      if (window.innerWidth < 1024) {
+        setXOffsetFactor(75);
+      } else {
+        setXOffsetFactor(45);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     slideRefs.current.forEach((slideEl, index) => {
@@ -31,7 +46,7 @@ const PortfolioElegant = () => {
       const reflectionEl = slideEl.querySelector('.slide-reflection');
 
       gsap.to(slideEl, {
-        xPercent: offset * X_OFFSET_FACTOR,
+        xPercent: offset * xOffsetFactor,
         y: isPrimary ? 0 : Y_OFFSET,
         rotationY: isPrimary ? 0 : (offset > 0 ? -ROTATION : ROTATION),
         scale: isPrimary ? PRIMARY_SCALE : SECONDARY_SCALE,
@@ -63,7 +78,7 @@ const PortfolioElegant = () => {
       }
     });
     
-  }, [currentSlide]);
+  }, [currentSlide, xOffsetFactor]);
 
   const handleSlideClick = (index) => {
     if (index === currentSlide) {
@@ -112,7 +127,7 @@ const PortfolioElegant = () => {
                 style={{ transformOrigin: 'center center' }}
                 onClick={() => handleSlideClick(index)}
               >
-                <div className="w-[55%] h-[75%] relative cursor-pointer group">
+                <div className="w-[90%] lg:w-[55%] h-[75%] relative cursor-pointer group">
                   <div className="slide-image-container w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-brand-dark/50">
                     <img
                       src={slide.thumbnail || (isVideo ? slide.media[0].src.replace('.mp4', '.jpg') : slide.media[0].src)}
