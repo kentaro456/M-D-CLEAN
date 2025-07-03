@@ -7,9 +7,9 @@ import ds3Img3 from '@/assets/portfolio/citroen-ds3/realisation-3.jpg';
 import ds3Img4 from '@/assets/portfolio/citroen-ds3/realisation-4.jpg';
 import ds3Vid5 from '@/assets/portfolio/citroen-ds3/realisation-5.mp4';
 
-import p3008Vid1 from '@/assets/portfolio/peugeot-3008/realisation-1.mp4';
-import p3008Vid2 from '@/assets/portfolio/peugeot-3008/realisation-2.mp4';
-import p3008Vid3 from '@/assets/portfolio/peugeot-3008/realisation-3.mp4';
+// import p3008Vid1 from '@/assets/portfolio/peugeot-3008/realisation-1.mp4';
+// import p3008Vid2 from '@/assets/portfolio/peugeot-3008/realisation-2.mp4';
+// import p3008Vid3 from '@/assets/portfolio/peugeot-3008/realisation-3.mp4';
 import p3008Vid4 from '@/assets/portfolio/peugeot-3008/realisation-4.mp4';
 import p3008Vid5 from '@/assets/portfolio/peugeot-3008/realisation-5.mp4';
 import p3008Vid6 from '@/assets/portfolio/peugeot-3008/realisation-6.mp4';
@@ -69,9 +69,9 @@ export const portfolioSlides = [
     description: "Rénovation intérieure filmée, montrant notre processus en détail.",
     thumbnail: p3008s2Img1,
     media: [
-      { type: 'video', src: p3008Vid1, alt: 'Vidéo 1' },
-      { type: 'video', src: p3008Vid2, alt: 'Vidéo 2' },
-      { type: 'video', src: p3008Vid3, alt: 'Vidéo 3' },
+      // { type: 'video', src: p3008Vid1, alt: 'Vidéo 1' },
+      // { type: 'video', src: p3008Vid2, alt: 'Vidéo 2' },
+      // { type: 'video', src: p3008Vid3, alt: 'Vidéo 3' },
       { type: 'video', src: p3008Vid4, alt: 'Vidéo 4' },
       { type: 'video', src: p3008Vid5, alt: 'Vidéo 5' },
       { type: 'video', src: p3008Vid6, alt: 'Vidéo 6' }
