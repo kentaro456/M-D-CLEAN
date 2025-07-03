@@ -1,50 +1,50 @@
 /* eslint-disable no-unused-vars */
 
 // Importez toutes les images et vidéos ici
-import ds3Img1 from '/src/assets/portfolio/citroen-ds3/realisation-1.jpg';
-import ds3Img2 from '/src/assets/portfolio/citroen-ds3/realisation-2.jpg';
-import ds3Img3 from '/src/assets/portfolio/citroen-ds3/realisation-3.jpg';
-import ds3Img4 from '/src/assets/portfolio/citroen-ds3/realisation-4.jpg';
-import ds3Vid5 from '/src/assets/portfolio/citroen-ds3/realisation-5.mp4';
+import ds3Img1 from './assets/portfolio/citroen-ds3/realisation-1.jpg';
+import ds3Img2 from './assets/portfolio/citroen-ds3/realisation-2.jpg';
+import ds3Img3 from './assets/portfolio/citroen-ds3/realisation-3.jpg';
+import ds3Img4 from './assets/portfolio/citroen-ds3/realisation-4.jpg';
+import ds3Vid5 from './assets/portfolio/citroen-ds3/realisation-5.mp4';
 
-import p3008Vid1 from '/src/assets/portfolio/peugeot-3008/realisation-1.mp4';
-import p3008Vid2 from '/src/assets/portfolio/peugeot-3008/realisation-2.mp4';
-import p3008Vid3 from '/src/assets/portfolio/peugeot-3008/realisation-3.mp4';
-import p3008Vid4 from '/src/assets/portfolio/peugeot-3008/realisation-4.mp4';
-import p3008Vid5 from '/src/assets/portfolio/peugeot-3008/realisation-5.mp4';
-import p3008Vid6 from '/src/assets/portfolio/peugeot-3008/realisation-6.mp4';
+import p3008Vid1 from './assets/portfolio/peugeot-3008/realisation-1.mp4';
+import p3008Vid2 from './assets/portfolio/peugeot-3008/realisation-2.mp4';
+import p3008Vid3 from './assets/portfolio/peugeot-3008/realisation-3.mp4';
+import p3008Vid4 from './assets/portfolio/peugeot-3008/realisation-4.mp4';
+import p3008Vid5 from './assets/portfolio/peugeot-3008/realisation-5.mp4';
+import p3008Vid6 from './assets/portfolio/peugeot-3008/realisation-6.mp4';
 
-import p3008s2Img1 from '/src/assets/portfolio/peugeot-3008-2/realisation-1.jpg';
-import p3008s2Img2 from '/src/assets/portfolio/peugeot-3008-2/realisation-2.jpg';
-import p3008s2Img3 from '/src/assets/portfolio/peugeot-3008-2/realisation-3.jpg';
-import p3008s2Img4 from '/src/assets/portfolio/peugeot-3008-2/realisation-4.jpg';
-import p3008s2Img5 from '/src/assets/portfolio/peugeot-3008-2/realisation-5.jpg';
-import p3008s2Img6 from '/src/assets/portfolio/peugeot-3008-2/realisation-6.jpg';
-import p3008s2Img7 from '/src/assets/portfolio/peugeot-3008-2/realisation-7.jpg';
-import p3008s2Img8 from '/src/assets/portfolio/peugeot-3008-2/realisation-8.jpg';
+import p3008s2Img1 from './assets/portfolio/peugeot-3008-2/realisation-1.jpg';
+import p3008s2Img2 from './assets/portfolio/peugeot-3008-2/realisation-2.jpg';
+import p3008s2Img3 from './assets/portfolio/peugeot-3008-2/realisation-3.jpg';
+import p3008s2Img4 from './assets/portfolio/peugeot-3008-2/realisation-4.jpg';
+import p3008s2Img5 from './assets/portfolio/peugeot-3008-2/realisation-5.jpg';
+import p3008s2Img6 from './assets/portfolio/peugeot-3008-2/realisation-6.jpg';
+import p3008s2Img7 from './assets/portfolio/peugeot-3008-2/realisation-7.jpg';
+import p3008s2Img8 from './assets/portfolio/peugeot-3008-2/realisation-8.jpg';
 
-import clioImg1 from '/src/assets/portfolio/clio-v/realisation-1.jpg';
-import clioImg2 from '/src/assets/portfolio/clio-v/realisation-2.jpg';
-import clioImg3 from '/src/assets/portfolio/clio-v/realisation-3.jpg';
-import clioImg4 from '/src/assets/portfolio/clio-v/realisation-4.jpg';
-import clioImg5 from '/src/assets/portfolio/clio-v/realisation-5.jpg';
-import clioImg6 from '/src/assets/portfolio/clio-v/realisation-6.jpg';
-import clioImg7 from '/src/assets/portfolio/clio-v/realisation-7.jpg';
-import clioImg8 from '/src/assets/portfolio/clio-v/realisation-8.jpg';
+import clioImg1 from './assets/portfolio/clio-v/realisation-1.jpg';
+import clioImg2 from './assets/portfolio/clio-v/realisation-2.jpg';
+import clioImg3 from './assets/portfolio/clio-v/realisation-3.jpg';
+import clioImg4 from './assets/portfolio/clio-v/realisation-4.jpg';
+import clioImg5 from './assets/portfolio/clio-v/realisation-5.jpg';
+import clioImg6 from './assets/portfolio/clio-v/realisation-6.jpg';
+import clioImg7 from './assets/portfolio/clio-v/realisation-7.jpg';
+import clioImg8 from './assets/portfolio/clio-v/realisation-8.jpg';
 
-import nissanImg1 from '/src/assets/portfolio/nissan/realisation-1.jpg';
-import nissanImg2 from '/src/assets/portfolio/nissan/realisation-2.jpg';
-import nissanImg3 from '/src/assets/portfolio/nissan/realisation-3.jpg';
-import nissanImg4 from '/src/assets/portfolio/nissan/realisation-4.jpg';
-import nissanImg5 from '/src/assets/portfolio/nissan/realisation-5.jpg';
-import nissanImg6 from '/src/assets/portfolio/nissan/realisation-6.jpg';
+import nissanImg1 from './assets/portfolio/nissan/realisation-1.jpg';
+import nissanImg2 from './assets/portfolio/nissan/realisation-2.jpg';
+import nissanImg3 from './assets/portfolio/nissan/realisation-3.jpg';
+import nissanImg4 from './assets/portfolio/nissan/realisation-4.jpg';
+import nissanImg5 from './assets/portfolio/nissan/realisation-5.jpg';
+import nissanImg6 from './assets/portfolio/nissan/realisation-6.jpg';
 
-import suzukiImg1 from '/src/assets/portfolio/suzuki-swift/realisation-1.jpg';
-import suzukiImg2 from '/src/assets/portfolio/suzuki-swift/realisation-2.jpg';
-import suzukiImg3 from '/src/assets/portfolio/suzuki-swift/realisation-3.jpg';
-import suzukiImg4 from '/src/assets/portfolio/suzuki-swift/realisation-4.jpg';
-import suzukiImg5 from '/src/assets/portfolio/suzuki-swift/realisation-5.jpg';
-import suzukiImg6 from '/src/assets/portfolio/suzuki-swift/realisation-6.jpg';
+import suzukiImg1 from './assets/portfolio/suzuki-swift/realisation-1.jpg';
+import suzukiImg2 from './assets/portfolio/suzuki-swift/realisation-2.jpg';
+import suzukiImg3 from './assets/portfolio/suzuki-swift/realisation-3.jpg';
+import suzukiImg4 from './assets/portfolio/suzuki-swift/realisation-4.jpg';
+import suzukiImg5 from './assets/portfolio/suzuki-swift/realisation-5.jpg';
+import suzukiImg6 from './assets/portfolio/suzuki-swift/realisation-6.jpg';
 
 
 // Données pour le composant Portfolio
