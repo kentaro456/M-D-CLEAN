@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
-import { Mail, Phone, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -17,9 +17,7 @@ const Footer = () => {
               L'excellence du détail pour des clients d'exception. Nettoyage automobile premium en Île-de-France.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="hover:text-brand-primary transition-colors"><Instagram /></a>
-              <a href="#" className="hover:text-brand-primary transition-colors"><Facebook /></a>
-              <a href="#" className="hover:text-brand-primary transition-colors"><Twitter /></a>
+              <a href="https://www.instagram.com/md_cleanofficiel/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary transition-colors"><Instagram /></a>
             </div>
           </div>
 
@@ -40,7 +38,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail className="w-5 h-5 mr-3 mt-1 flex-shrink-0" />
-                <a href="mailto:mdclean.idf@gmail.com" className="hover:text-brand-primary transition-colors break-all">mdclean.idf@gmail.com</a>
+                <a href="mailto:mdcleanofficiel@gmail.com" className="hover:text-brand-primary transition-colors break-all">mdcleanofficiel@gmail.com</a>
               </li>
               <li className="flex items-start">
                 <Phone className="w-5 h-5 mr-3 mt-1 flex-shrink-0" />
